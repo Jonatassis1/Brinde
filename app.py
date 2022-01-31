@@ -19,7 +19,6 @@ def brinde(number_brinde):
 def brinde():
     return render_template("cotacao.html")
 
-@app.route("/buscar", methods = ["GET", "post"])
 
 if __name__ == '__main__':
     app.run(debug=True)
