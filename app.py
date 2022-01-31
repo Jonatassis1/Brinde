@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import requests
 
 app = Flask(__name__)
 
@@ -13,6 +14,12 @@ def hello_world():  # put application's code here
 @app.route('/brinde/<number_brinde>')
 def brinde(number_brinde):
     return render_template("brinde.html", number_brinde=number_brinde)
+
+@app.route('/cotacao/')
+def brinde():
+    return render_template("cotacao.html")
+
+@app.route("/buscar", methods = ["GET", "post"])
 
 if __name__ == '__main__':
     app.run(debug=True)
