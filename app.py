@@ -11,12 +11,12 @@ app = Flask(__name__)
 def hello_world():  # put application's code here
     return render_template("homepage.html")
 
-@app.route('/brinde/<number_brinde>')
-def brinde(number_brinde):
-    return render_template("brinde.html", number_brinde=number_brinde)
+@app.route('/brinde/')
+def brinde():
+    return render_template("brinde.html")
 
 @app.route('/cotacao/')
-def brinde():
+def cotacao():
     return render_template("cotacao.html")
 
 
